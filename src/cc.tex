@@ -1,16 +1,24 @@
-\documentclass{article}
+\PassOptionsToPackage{dvipsnames}{xcolor}
 
+\documentclass{article}
 \usepackage[a4paper,landscape,margin=0.5cm]{geometry}
 \usepackage{colortbl}
 \usepackage{multirow}
 \usepackage{tikz}
 \usepackage{relsize}
 \usepackage{hyperref}
+\usepackage{fdsymbol}
 
-\renewcommand{\sp}{\ensuremath\spadesuit}
-\newcommand{\he}{\ensuremath\heartsuit}
-\newcommand{\di}{\ensuremath\diamondsuit}
-\newcommand{\cl}{\ensuremath\clubsuit}
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varspade}{\mathalpha}{extraup}{81}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+\DeclareMathSymbol{\varclub}{\mathalpha}{extraup}{84}
+
+\renewcommand{\sp}{\textcolor{RoyalBlue}{$\varspade$}}
+\newcommand{\he}{\textcolor{RubineRed}{$\varheart$}}
+\newcommand{\di}{\textcolor{Peach}{$\vardiamond$}}
+\newcommand{\cl}{\textcolor{LimeGreen}{$\varclub$}}
 \newcommand{\nt}{\relsize{-1}NT\relsize{1}}
 \newcommand{\up}{\textsuperscript{+}}
 \newcommand{\down}{\textsuperscript{-}}
